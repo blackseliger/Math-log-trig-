@@ -5,7 +5,11 @@ class Magician {
   }
   
   set attack(poitns) {
-    this._attack = poitns / this.distance; // this.distance undefined 
+    console.log(this.distance); // undefined
+    if (this.distance === 2) this._attack = (poitns / 100) * 90;
+    if (this.distance === 3) this._attack = (poitns / 100) * 80;
+    if (this.distance === 4) this._attack = (poitns / 100) * 70;
+    if (this.distance === 5) this._attack = (poitns / 100) * 60; 
   }
 
 
